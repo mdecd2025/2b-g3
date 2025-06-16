@@ -2,7 +2,7 @@
         <head>
         <title>cdproject</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,15 +142,22 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Exam3 << <a href='Exam3.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>Final</h1>
-<p><span>期末協同專案執行過程影片、簡報與 PDf 報告檔案 (六人一組) (30%)</span></p>
-<p><span>題目: <span style="background-color: #ccffcc;">Webots 動態投籃模擬系統的協同設計</span></span></p>
-<p><span>說明: </span></p>
-<p style="padding-left: 30px;"><span>籃框架被配置在一定範圍內, 可隨機慢速前進、後退及左右擺動, 投籃機構系統帶有一定數量的籃球, 被配置在可自由移動的輪車上.</span></p>
-<p style="padding-left: 30px;"><span>操作者可利用鍵盤特定按鍵控制投籃輪車的移動並發射投籃, 每投出一球後系統透過記分板進行計分, 並由送球機構進行補球或移動輪車取球, 遊戲可進行至全部數量籃球投完為止.</span></p>
-<p>請將期末協同專案執行過程、內容與心得, 製作成影片，配合字幕上傳至 Youtube 後嵌入各階段的期末報告頁面中.</p>
-<p>影片標題: <span style="background-color: #ffff00;">國立虎尾科技大學 - 機械設計工程系 - cd2025 期末報告 - 學員學號 - 各階段影片主題<br/></span></p>
-<br />Exam3 << <a href='Exam3.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+    <div id="tipue_search_content">task4 << <a href='task4.html'>Previous</a> <a href='task5.html'>Next</a> >> task5<br /><h1>w4</h1>
+<p><span>使用webot建立四連桿練習影片:<a href="https://youtu.be/XBE5bwX22Ro">https://youtu.be/XBE5bwX22Ro</a></span></p>
+<p><span>四連桿檔案:<a href="./../downloads/box_fourbar4.zip">/downloads/box_fourbar4.zip</a></span></p>
+<p><strong>建造平面四連桿的尺寸設計: 固定桿長度為 1m, 主動旋轉桿長度為 0.4m, 第二旋轉桿長度為 0.6m, 第三旋轉桿長度為 0.9m</strong></p>
+<p>1.建立robot群組</p>
+<p>2.robot下的children建立1個solid群組，2個higejoint群組，並選一個為首要，命名為joint1</p>
+<p>3.solid的children中建立shape作為固定桿(X1,Y0.1,Z0.1)</p>
+<p>4.<span>joint1下的endpoint選擇solid性質，命名為link1，並往下的children中建立pose及higejoint，pose下在建立shape為主動桿(0.4,0.1,0.1)</span><span>，shape命名為link1，再將主動桿所屬的pose的translation設為(0.2,0,0)(此為link1中心點)，而higejoint為主動桿與第二桿連接，並命名為joint2。</span></p>
+<p><span>5.joint1的endpoint下有translation(此為連接處的座標點)，設(-0.5,0,0.1)</span></p>
+<p><span>6.在joint1下有boundingObject，選擇pose，往下children選擇USE link1，並調整座標至(0.2,0,0)(與link1的pose座標一致)，在設置physics</span></p>
+<p>7.以上順序重複製作，主要為base--&gt;joint1--&gt;link1--&gt;<span>joint2--&gt;link2--&gt;</span><span>joint3--&gt;link3--&gt;joint4</span></p>
+<p><span>8.joint4在robot群組中的children，與joint1同排列，並將endpoint設為solidreference，並選為use link3</span></p>
+<p><span>9.每一階的joint中各有jointparameters、device、emdpoint，其中link1上的device要加入Rotationalmotor，並命名為motor</span></p>
+<p><span>10.而每一階的jointparameters，axis設為(0,0,1)(意為繞z軸旋轉)，但anchor要設為桿的長度，這樣才是joint到joint的距離，分別為(-0.5,0,0)、(0.4,0,0)、(0.6,0,0)，此座標是接續的，原點根據base的起點，另外設置的joint4則為(0.5,0,0)</span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/XBE5bwX22Ro" width="560"></iframe></span></p>
+<p><span></span></p><br />task4 << <a href='task4.html'>Previous</a> <a href='task5.html'>Next</a> >> task5</div>
         
     <!-- footer -->
       <div class="container">

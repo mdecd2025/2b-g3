@@ -116,7 +116,14 @@ for stud in all_stud:
         brython_div1 &lt;= html.BR()  # 換行</pre>
 <p></p>
 <h2>task2</h2>
-<h3>w3</h3>
+<p>近端倉儲推送:</p>
+<p><a href="https://youtu.be/8n1LiOqBkko">https://youtu.be/8n1LiOqBkko</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/8n1LiOqBkko" width="560"></iframe></p>
+<p><a href="https://youtu.be/1Y36Zis2M6E">https://youtu.be/1Y36Zis2M6E</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/1Y36Zis2M6E" width="560"></iframe></p>
+<p><span>建立SSH key:</span></p>
+<p><span><img alt="" height="231" src="/images/螢幕擷取畫面 2025-03-25 083816.png" width="297"/></span></p>
+<p><span><img alt="" height="249" src="/images/螢幕擷取畫面 2025-03-25 083834.png" width="561"/></span></p><h3>w3</h3>
 <p><span>已知各班已經參與分組的學員 Github 帳號分別如下:</span></p>
 <pre class="brush:java;auto-links:false;toolbar:false" contenteditable="false">a_all_members = ['41223154', '41271125', '41271158', '41271146', '41271131', 'CYG41223103', '41223102', '41023128', '41023137', '41223137', '41223157', '41223156', 'otakuyoyo', '41223141', '41223113', 'kim41223114', 'joeisme1208', '41223116', '41223144', '41223140', '41223143', '41223138', '41223134', '41223136', 'zhe41223118', 'Spirit0224', 'yuhao-08', '41223158', 'Ren911308', '41223150', 'Manto8', 'CYA41223106', 'yan21ed', 'Lin41223107', '41223133', 'hong41223129', '41223110', '41223147', 'Linjiahong41223125', 'CHN41223132', 'Yu-Fang-Hong', '41023111', 'yckaooooo', 'kolas911205', '41023105', '40932134', '41223104', 'yan41223101', '41223105', '41223153', '41223120', '41223152', 'G8People', 'WSE41223112', '41223146', '41223119']
 b_all_members = ['41223251', '41223211', '41223245', '41223243', 'jjjay41223212', 'leeshaowei0716', '41223234', '41223209', '41223205', '41223201', '41223202', '41223208-hw', '41223216', '41223217', '41223248', 'emma0312', '41223242', '41223203', '41223144', '41223235', 'RAY41223215', 'hyy41223228', '41223227', '41223206', '41223226-0', 'Cloud41223237', 'Yujenchuang', '41223225', 'ljg41223220', 'supowen', 'jacky93111', '41223246', 'Liu41223244', '41223236', '41223219', '41271237', '41223249', '41223229', '41223224', '41223222', '41223231', 'linryan23', '41023114', '41223230', 'timluo123', 'CYC41223247', '41223218', 'ych0227', '41023215', '41023216', '41023213', '41071203', '41071204', '41071202', 'c-ching', 'YUN4', 'tseYU000', 'snowfall-killer', 'junpig10']
@@ -198,7 +205,22 @@ for student in all_stud:
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="225" referrerpolicy="strict-origin-when-cross-origin" src="//www.youtube.com/embed/tDq35B24AVQ" title="fourbar linkage design-Solvespace 建立平面四連桿系統零組件-41223235" width="400"></iframe></p>
 <p><span style="background-color: #cc99ff;">fourbar linkage design w assembly</span></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="225" referrerpolicy="strict-origin-when-cross-origin" src="//www.youtube.com/embed/TDIRsUjEwhw" title="fourbar linkage design w assembly-Solvespace 建立平面四連桿系統零組件-41223235" width="400"></iframe></p><h2>task4</h2>
-<h2>task5</h2>
+<h3>w4</h3>
+<p><span>使用webot建立四連桿練習影片:<a href="https://youtu.be/XBE5bwX22Ro">https://youtu.be/XBE5bwX22Ro</a></span></p>
+<p><span>四連桿檔案:<a href="/downloads/box_fourbar4.zip">/downloads/box_fourbar4.zip</a></span></p>
+<p><strong>建造平面四連桿的尺寸設計: 固定桿長度為 1m, 主動旋轉桿長度為 0.4m, 第二旋轉桿長度為 0.6m, 第三旋轉桿長度為 0.9m</strong></p>
+<p>1.建立robot群組</p>
+<p>2.robot下的children建立1個solid群組，2個higejoint群組，並選一個為首要，命名為joint1</p>
+<p>3.solid的children中建立shape作為固定桿(X1,Y0.1,Z0.1)</p>
+<p>4.<span>joint1下的endpoint選擇solid性質，命名為link1，並往下的children中建立pose及higejoint，pose下在建立shape為主動桿(0.4,0.1,0.1)</span><span>，shape命名為link1，再將主動桿所屬的pose的translation設為(0.2,0,0)(此為link1中心點)，而higejoint為主動桿與第二桿連接，並命名為joint2。</span></p>
+<p><span>5.joint1的endpoint下有translation(此為連接處的座標點)，設(-0.5,0,0.1)</span></p>
+<p><span>6.在joint1下有boundingObject，選擇pose，往下children選擇USE link1，並調整座標至(0.2,0,0)(與link1的pose座標一致)，在設置physics</span></p>
+<p>7.以上順序重複製作，主要為base--&gt;joint1--&gt;link1--&gt;<span>joint2--&gt;link2--&gt;</span><span>joint3--&gt;link3--&gt;joint4</span></p>
+<p><span>8.joint4在robot群組中的children，與joint1同排列，並將endpoint設為solidreference，並選為use link3</span></p>
+<p><span>9.每一階的joint中各有jointparameters、device、emdpoint，其中link1上的device要加入Rotationalmotor，並命名為motor</span></p>
+<p><span>10.而每一階的jointparameters，axis設為(0,0,1)(意為繞z軸旋轉)，但anchor要設為桿的長度，這樣才是joint到joint的距離，分別為(-0.5,0,0)、(0.4,0,0)、(0.6,0,0)，此座標是接續的，原點根據base的起點，另外設置的joint4則為(0.5,0,0)</span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/XBE5bwX22Ro" width="560"></iframe></span></p>
+<p><span></span></p><h2>task5</h2>
 <h2>task6</h2>
 <h1>Homework</h1>
 <h2>HW1</h2>
