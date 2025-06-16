@@ -142,55 +142,14 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">task2 << <a href='task2.html'>Previous</a> <a href='task3.html'>Next</a> >> task3<br /><h1>w3</h1>
-<p><a href="https://mdecd2025.github.io/hw-hyy41223228/content/Brython.html?src=https://gist.githubusercontent.com/hyy41223228/255a206672118b55bd653c11fb0aea13/raw/b0ba68eea979eeea81da3cb67524fa73ccef3643/%25E5%2585%25A7%25E5%25AE%25B91">列出目前尚未納入分組的學員名單.</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document, window
-
-# 資料來源
-url = "https://mde.tw/list/2b.txt"
-
-# 已分組 GitHub 帳號清單
-grouped_accounts = {
-    '41223251', '41223211', '41223245', '41223243', 'jjjay41223212', 'leeshaowei0716',
-    '41223234', '41223209', '41223205', '41223201', '41223202', '41223208-hw',
-    '41223216', '41223217', '41223248', 'emma0312', '41223242', '41223203',
-    '41223144', '41223235', 'RAY41223215', 'hyy41223228', '41223227', '41223206',
-    '41223226-0', 'Cloud41223237', 'Yujenchuang', '41223225', 'ljg41223220',
-    'supowen', 'jacky93111', '41223246', 'Liu41223244', '41223236', '41223219',
-    '41271237', '41223249', '41223229', '41223224', '41223222', '41223231',
-    'linryan23', '41023114', '41223230', 'timluo123', 'CYC41223247', '41223218',
-    'ych0227', '41023215', '41023216', '41023213', '41071203', '41071204',
-    '41071202', 'c-ching', 'YUN4', 'tseYU000', 'snowfall-killer', 'junpig10'
-}
-
-brython_div1 = document["brython_div1"]
-
-def process_data(response_text):
-    data = response_text.splitlines()
-    all_stud = data[1:]
-
-    for stud in all_stud:
-        student_info = stud.strip().split()
-
-        if len(student_info) == 2:
-            student_id = student_info[0].strip()
-            student_account = student_info[1].strip()
-
-            # 帳號不在已分組名單 → 尚未分組
-            if student_account not in grouped_accounts:
-                brython_div1 &lt;= student_id
-                brython_div1 &lt;= html.BR()
-
-        elif len(student_info) == 1:
-            # 沒有帳號的直接列出
-            student_id = student_info[0].strip()
-            brython_div1 &lt;= student_id
-            brython_div1 &lt;= html.BR()
-
-window.fetch(url).then(lambda response: response.text()).then(process_data)
-</pre>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/RjX95uqpmDk" width="560"></iframe></p>
-<br />task2 << <a href='task2.html'>Previous</a> <a href='task3.html'>Next</a> >> task3</div>
+    <div id="tipue_search_content">w7 << <a href='w7.html'>Previous</a> <a href='w11.html'>Next</a> >> w11<br /><h1>w9</h1>
+<p><span>shooter導入webot</span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/7d5zxNYK7U4" width="560"></iframe></p>
+<p>過程 </p>
+<p>使用老師給的零件圖尺寸，利用<span>solvespace組裝轉出stl檔，stl檔利用老師的py檔轉成obj供webots使用</span></p>
+<p><span>打開webots 開起一個robot群組 在robot的children裡建立三個子群組solid當base 兩個hingejoint 一個當joint1檔連桿之間的定位和鎖固，一個當joint4讓連桿的群組和base的另一個軸連接。</span></p>
+<p><span>在joint1裡建立higejintparameters和solid 在solid裡開啟children建立cadshape用來開啟桿一的外形，再從solid裡開啟mesh開啟桿一的碰撞體積，在開啟phyaixs，開啟桿子的物理性質，讓馬達傳動時會跟著一起運動，在回到joint1的device裡開啟馬達。joint1的higejintparameters是控制joint1軸的位子以及角度，需要特別注意。</span></p>
+<p>後續一直到<span>joint4都是無限套娃除了馬達不用開其他都一樣，在最後joint4鏈接base的時候要特別注意使用的是solidreference鏈接桿3，要注意的是桿三要取名字。</span></p><br />w7 << <a href='w7.html'>Previous</a> <a href='w11.html'>Next</a> >> w11</div>
         
     <!-- footer -->
       <div class="container">
